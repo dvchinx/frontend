@@ -1,0 +1,93 @@
+.verification-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #1a1a24;
+  padding: 2rem;
+}
+
+.verification-card {
+  background: #2a2a38;
+  border: 1px solid #3a3a48;
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.verification-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem;
+  width: 80px;
+  height: 80px;
+}
+
+.verification-icon.verifying {
+  color: #6B73FF;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.verification-title {
+  color: white;
+  font-size: 1.875rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+}
+
+.verification-message {
+  color: #a0a0b0;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.verification-message.success {
+  color: #22c55e;
+}
+
+.verification-message.error {
+  color: #ef4444;
+}
+
+.verification-button {
+  background: #6B73FF;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0.875rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: 100%;
+}
+
+.verification-button:hover {
+  background: #5a62e6;
+}
+
+.verification-button.secondary {
+  background: #2a2a38;
+  border: 1px solid #4a4a58;
+}
+
+.verification-button.secondary:hover {
+  background: #323242;
+  border-color: #5a5a68;
+}

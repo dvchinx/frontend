@@ -1,0 +1,166 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2rem;
+}
+
+.modal-content {
+  background: #2a2a38;
+  border: 1px solid #3a3a48;
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.modal-title {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  color: #8a8a9a;
+  cursor: pointer;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+
+.modal-close:hover {
+  color: white;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  color: #a0a0b0;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  background: #323242;
+  border: 1px solid #3a3a48;
+  border-radius: 10px;
+  padding: 0.875rem 1rem;
+  color: white;
+  font-size: 0.9375rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #6a6a7a;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  border-color: #6B73FF;
+  background: #383848;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-select {
+  cursor: pointer;
+}
+
+.form-select option {
+  background: #2a2a38;
+  color: white;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn-modal-primary {
+  flex: 1;
+  background: #6B73FF;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0.875rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-modal-primary:hover {
+  background: #5a62e6;
+}
+
+.btn-modal-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-modal-secondary {
+  flex: 1;
+  background: #2a2a38;
+  color: white;
+  border: 1px solid #3a3a48;
+  border-radius: 10px;
+  padding: 0.875rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.btn-modal-secondary:hover {
+  background: #323242;
+  border-color: #4a4a58;
+}
+
+.error-message-modal {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #ef4444;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  font-size: 0.875rem;
+}
