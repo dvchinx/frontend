@@ -162,7 +162,7 @@ function ImageGalleryEditor() {
   const loadImageForEditing = async () => {
     const fullUrl = selectedImage.url.startsWith('http') 
       ? selectedImage.url 
-      : `http://localhost:8080${selectedImage.url}`;
+      : selectedImage.url;
     
     try {
       const img = await loadImageFromUrl(fullUrl);
@@ -513,7 +513,7 @@ function ImageGalleryEditor() {
             {images.map((image) => (
               <div key={image.id} className="gallery-item">
                 <img
-                  src={image.url.startsWith('http') ? image.url : `http://localhost:8080${image.url}`}
+                  src={image.url.startsWith('http') ? image.url : image.url}
                   alt={image.filename}
                   onClick={() => handleImageClick(image)}
                 />

@@ -16,8 +16,8 @@ function ProfileDropdown({ user, onLogout, onViewProfile }) {
       return user.avatarUrl;
     }
     
-    // Si es una ruta relativa, agregar el prefijo del backend
-    return `http://localhost:8080${user.avatarUrl}`;
+    // Si es una ruta relativa, devolverla tal cual (será manejada por el proxy)
+    return user.avatarUrl;
   };
 
   const isMobile = () => {

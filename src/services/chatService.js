@@ -2,7 +2,7 @@ import SockJS from 'sockjs-client';
 import { Stomp } from '@stomp/stompjs';
 
 const API_URL = '/api/chat';
-const USERS_URL = 'http://localhost:8081/api/users';
+const USERS_URL = '/api/users';
 const WS_URL = '/ws';
 
 let stompClient = null;

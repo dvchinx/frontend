@@ -48,7 +48,7 @@ function Profile() {
       if (result.data.avatarUrl) {
         const avatarUrl = result.data.avatarUrl.startsWith('http') 
           ? result.data.avatarUrl 
-          : `http://localhost:8080${result.data.avatarUrl}`;
+          : result.data.avatarUrl;
         setAvatarPreview(avatarUrl);
       } else {
         setAvatarPreview(null);
@@ -130,7 +130,7 @@ function Profile() {
       if (profile?.avatarUrl) {
         const avatarUrl = profile.avatarUrl.startsWith('http') 
           ? profile.avatarUrl 
-          : `http://localhost:8080${profile.avatarUrl}`;
+          : profile.avatarUrl;
         setAvatarPreview(avatarUrl);
       } else {
         setAvatarPreview(null);
